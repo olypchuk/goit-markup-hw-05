@@ -19,7 +19,7 @@
         <nav class="nav">
            <a href="./index.html" class="logo"><span class="logoweb">Web</span>Studio</a>
                 <ul class="nav-list" >
-                    <li class="nav list-item studio"><a href="./index.html " class="navigation studio">Студия</a></li>
+                    <li class="nav list-item studio"><a href="./index.html " class="navigation studio-navigation">Студия</a></li>
                     <li class="nav list-item"><a href="./portfolio.html" class="navigation">Портфолио</a></li>
                     <li class="nav list-item"><a href="./game.html" class="navigation">Контакты</a></li>
                 </ul>
@@ -66,12 +66,14 @@
          </li>
      </ul></div>
  </section>
-   <section class="section about"><h3 class="about-title">Чем мы занимаемся</h3>
-        <ul class="images container">
-            <li class="images-list-images"><img src="./images/computer.jpg" alt="computer" width="370"></li>
-            <li class="images-list-images"><img src="./images/phone.jpg" alt="phone" width="370"></li>
-            <li class="images-list-images"><img src="./images/tablet.jpg" alt="tablet" width="370"></li>
-        </ul></section>
+  
+ <section class="section about"><h3 class="about-title">Чем мы занимаемся</h3>
+    <ul class="images container">
+      <li class="images-list-images"><img src="./images/computer.jpg" alt="computer" width="370"><div class="backdrop"><span class="backdrop-span backdrop-desktop">Десктопные приложения</span></div></li>
+        <li class="images-list-images"><img src="./images/phone.jpg" alt="phone" width="370"><div class="backdrop"><span class="backdrop-span backdrop-mobile">Мобильные приложения</span></div></li>
+        <li class="images-list-images"><img src="./images/tablet.jpg" alt="tablet" width="370"><div class="backdrop"><span class="backdrop-span backdrop-design">Дизайнерские решения</span></div></li>
+    </ul></section>
+
 
         <section class="section team">
             <!-- Наша команда -->
@@ -146,7 +148,12 @@
 
             </div>
         </section>
+        
+<div class="modal-container is-hidden">
+        <div class="modal"> <div class="close-svg"><button class="modal-close-button"><svg class="cross"><use href="./images/symbol-defs.svg#icon-cross"></use></svg></button></div>
+                   </div></div>
 
+       
     </main>
     <footer class="footer">
         <div class="footer container">
