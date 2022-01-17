@@ -5,7 +5,7 @@
     --backgroundcolor: #ffffff;
     --footercolor: rgba(255, 255, 255, 0.6);
     --hovercolor: #188ce8;
-    --transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
     font-family: "roboto", sans-serif;
@@ -127,7 +127,7 @@ img {
     line-height: 114%;
     text-decoration: none;
     color: var(--secondarycolor);
-    transition: var(--transition);
+    transition: color var(--transition);
 }
 .studio,
 .studio-navigation,
@@ -493,7 +493,7 @@ img {
     padding: 63px 24px;
     width: 100%;
     height: 100%;
-    transform: translatey(100%);
+    transform: translatey(101%);
 }
 .card-full:hover .p-overlay {
     transform: translatey(0);
@@ -587,12 +587,16 @@ img {
     /* bottom: 0;
     right: 0; */
     background: rgba(0, 0, 0, 0.2);
-    pointer-events: none;
+    transition: opacity var(--transition), visibility var(--transition),
+        transform var(--transition);
+
+    /* scale(0.8) var(--transition); */
 }
 .is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    transform: scale(1.5);
 }
 .modal {
     position: fixed;
@@ -600,13 +604,13 @@ img {
     height: 581px;
     top: 50%;
     left: 50%;
+    transition: transform var(--transition);
     transform: translate(-50%, -50%);
 
-    background: #ffffff;
+    background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    /* outline: 3px solid tomato; */
 }
 .close-svg {
     display: flex;
@@ -615,6 +619,7 @@ img {
     position: absolute;
     top: 8px;
     right: 8px;
+    cursor: pointer;
 }
 .modal-close-button {
     display: flex;
@@ -628,9 +633,6 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     cursor: pointer;
-}
-.modal-close-button:hover,
-.modal-close-button:focus {
 }
 
 .cross {
